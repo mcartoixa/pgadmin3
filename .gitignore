@@ -1,3 +1,5 @@
+/.tmp/
+
 # Global excludes across all subdirectories
 *.o
 *.app

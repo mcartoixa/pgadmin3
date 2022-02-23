@@ -10,7 +10,7 @@ SET APPKEYWORDS=PostgreSQL, pgAdmin
 SET APPCOMMENTS=PostgreSQL Tools
 SET APPDESCRIPTION=Management and administration tools for the PostgreSQL DBMS
 IF NOT (%WIXDIR%)==() GOTO DONE_WIXDIR
-SET WIXDIR="C:\Program Files (x86)\Windows Installer XML v3\bin"
+SET WIXDIR="C:\Program Files (x86)\WiX Toolset v3.11\bin"
 :DONE_WIXDIR
 
 SET BUILDTREE="../.."

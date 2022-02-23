@@ -1,0 +1,24 @@
+version: 1.23.{build}
+image: Visual Studio 2013
+
+
+
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+
+
+install:
+  # Set up build environment
+  - cmd: CALL build\SetEnv.bat /clean
+  - cmd: pip.exe install -U Sphinx
+cache:
+  - .tmp -> appveyor.yml, build\versions.env
+
+
+
+build_script:
+  - cmd: msbuild.exe pgAdmin3.sln /nologo /p:Configuration="Release" /m /l:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /v:m /fl /flp:logfile=build.log;verbosity=diagnostic;encoding=UTF-8
+
+artifacts:
+  - path: pkg\win32\pgadmin3.msi

@@ -1,8 +1,10 @@
-pgAdmin III README
-==================
- 
-Introduction
-------------
+# pgAdmin III
+
+[![Build status](https://ci.appveyor.com/api/projects/status/9rbw835miwytp3pa?svg=true)](https://ci.appveyor.com/project/mcartoixa/pgadmin3)
+
+
+
+## Introduction
 
 pgAdmin III is the most popular and feature rich Open Source administration and
 development platform for PostgreSQL, the most advanced Open Source database in
@@ -24,13 +26,11 @@ pgAdmin III is developed by a community of PostgreSQL experts around the world
 and is available in more than a dozen languages. It is Free Software released 
 under the PostgreSQL License.
 
-Compilation
------------
+## Compilation
 
 Please see the INSTALL file for compilation and installation instructions.
 
-Translation
------------
+## Translation
 
 Translation into your preferred language is easily possible even for 
 non-programmers. Please see http://www.pgadmin.org/translation/ for 

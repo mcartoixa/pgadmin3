@@ -1,0 +1,16 @@
+ src/msw/window.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/msw/window.cpp b/src/msw/window.cpp
+index 42b1be1c71..75296c39aa 100644
+--- a/src/msw/window.cpp
++++ b/src/msw/window.cpp
+@@ -106,7 +106,7 @@
+     #include <windowsx.h>
+ #endif
+ 
+-#if !defined __WXWINCE__ && !defined NEED_PBT_H
++#if !defined __WXWINCE__ && defined NEED_PBT_H
+     #include <pbt.h>
+ #endif
+ 

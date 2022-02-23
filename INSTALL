@@ -138,8 +138,7 @@ Windows
 You will need:
 
 - Windows 2000 or above.
-- Microsoft Visual C++ 2010.
-- The Windows 2010 Platform SDK.
+- Microsoft Visual C++ 2013.
 - Windows Installer XML v3.
 - wxMSW 2.8.11 or above from http://www.wxwidgets.org/
 - libxml2 2.6.18 or above from http://www.xmlsoft.org/
@@ -158,6 +157,15 @@ Building:
 
 1) Unpack the wxMSW source code to a convenient location pointed to by the 
    %WXWIN% environment variable.
+
+2) Configure wxMSW.  Open the %WXWIN%\build\msw\wx.dsw and
+   %WXWIN%\contrib\build\stc\stc.dsw projects with Visual Studio 2013 and
+   convert them to the new format. Fix the properties of each project in each
+   configuration (yeah, really) so that the TargetName property always matches
+   what is in the OutpuFile properties. Then fix window.cpp line 109 as
+   "#if !defined __WXWINCE__ && defined NEED_PBT_H"
+   (cf. https://forums.wxwidgets.org/viewtopic.php?t=36993).
+
 
 2) Build wxMSW.  To do this, run the build-wxmsw.bat script from the
    xtra/wx-build directory in the pgAdmin source tree, in a Visual C++ 
